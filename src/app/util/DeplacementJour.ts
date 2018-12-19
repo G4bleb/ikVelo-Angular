@@ -3,9 +3,9 @@ export class DeplacementJour {
     private _nb_km: number;
     private _montant: number;
     private _jour: number;
-    private _date: string;
-    private _created: string;
-    private _updated: string;
+    private _date: any;
+    private _created: any;
+    private _updated: any;
     private _type_deplacement_id: number;
     private _deplacement_id: number;
 
@@ -21,13 +21,13 @@ export class DeplacementJour {
     get jour(): number {
         return this._jour;
     }
-    get date(): string {
+    get date(): any {
         return this._date;
     }
-    get created(): string {
+    get created(): any {
         return this._created;
     }
-    get updated(): string {
+    get updated(): any {
         return this._updated;
     }
     get type_deplacement_id(): number {
@@ -50,13 +50,13 @@ export class DeplacementJour {
     set jour(set: number) {
         this._jour = set;
     }
-    set date(set: string) {
+    set date(set: any) {
         this._date = set;
     }
-    set created(set: string) {
+    set created(set: any) {
         this._created = set;
     }
-    set updated(set: string) {
+    set updated(set: any) {
         this._updated = set;
     }
     set type_deplacement_id(set: number) {

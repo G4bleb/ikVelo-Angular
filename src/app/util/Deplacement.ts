@@ -2,9 +2,9 @@ export class Deplacement {
     private _id: number;
     private _annee: number;
     private _mois: number;
-    private _date_validation: string; 
-    private _created: string;
-    private _updated: string;
+    private _date_validation: any; 
+    private _created: any;
+    private _updated: any;
     private _user_id: number;
     private _user_id1: number;
     private _validation: boolean;
@@ -18,13 +18,13 @@ export class Deplacement {
     get mois(): number {
         return this._mois;
     }
-    get date_validation(): string {
+    get date_validation(): any {
         return this._date_validation;
     }
-    get created(): string {
+    get created(): any {
         return this._created;
     }
-    get updated(): string {
+    get updated(): any {
         return this._updated;
     }
     get user_id(): number {
@@ -46,13 +46,13 @@ export class Deplacement {
     set mois(set: number) {
         this._mois = set;
     }
-    set date_validation(set: string) {
+    set date_validation(set: any) {
         this._date_validation = set;
     }
-    set created(set: string) {
+    set created(set: any) {
         this._created = set;
     }
-    set updated(set: string) {
+    set updated(set: any) {
         this._updated = set;
     }
     set user_id(set: number) {

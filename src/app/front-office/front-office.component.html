@@ -1,3 +1,26 @@
 <p>
-  front-office works!
+  recupdata works! {{deplacements | json}}
 </p>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Annee</th>
+      <th>Mois</th>
+      <th>Datevalidation</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let instance of deplacements">
+      <td>{{instance.annee}}</td>
+      <td>{{instance.mois}}</td>
+      <td *ngIf="instance.date_validation != null">{{instance.date_validation.date}}</td>
+      <td *ngIf="instance.created != null">{{instance.created.date}}</td>
+      <td *ngIf="instance.updated != null">{{instance.updated.date}}</td>
+      <td>{{instance.validation}}</td>
+    </tr>
+  </tbody>
+</table>
