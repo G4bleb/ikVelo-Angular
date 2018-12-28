@@ -11,11 +11,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrontOfficeComponent } from './front-office/front-office.component';
+import { DeplacementFromUserComponent } from './deplacement-from-user/deplacement-from-user.component';
+import { DeplacementFromUserYearMonthComponent } from './deplacement-from-user-year-month/deplacement-from-user-year-month.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrontOfficeComponent
+    FrontOfficeComponent,
+    DeplacementFromUserComponent,
+    DeplacementFromUserYearMonthComponent
   ],
   imports: [
     BrowserModule,

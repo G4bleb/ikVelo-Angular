@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 // import 'rxjs/add/operator/map';
 
-import { Deplacement } from "../util/Deplacement";
-import { DeplacementJour } from "../util/DeplacementJour";
+// import { Deplacement } from "../util/Deplacement";
+// import { DeplacementJour } from "../util/DeplacementJour";
 @Component({
   selector: 'app-front-office',
   templateUrl: './front-office.component.html',
@@ -23,7 +23,8 @@ export class FrontOfficeComponent implements OnInit {
         //this.list = response;
         console.log(response);
         // this.list = this.responseSanitizer(response);
-        this.deplacements = this.dateObjectsToDates(response);
+        // this.deplacements = this.dateObjectsToDates(response);
+        this.deplacements = response;
       },
       (error) => {
         console.log('Erreur ! : ' + error);
