@@ -1,15 +1,11 @@
-<p>
-  recupdata works! {{deplacements | json}}
-</p>
-<br>
 <table>
   <thead>
     <tr>
-      <th>Annee</th>
+      <th>Année</th>
       <th>Mois</th>
-      <th>Created</th>
-      <th>Updated</th>
-      <th>DateValidation</th>
+      <th>Créé</th>
+      <th>Mis à jour</th>
+      <th>Date de validation</th>
       <th>Validation</th>
     </tr>
   </thead>
@@ -18,10 +14,10 @@
       <td>{{instance.annee}}</td>
       <td>{{instance.mois}}</td>
       <td *ngIf="instance.created != null">{{instance.created.date}}</td>
-      <td *ngIf="instance.updated != null">{{instance.updated.date}}</td>
-      <td *ngIf="instance.dateValidation != null">{{instance.dateValidation.date}}</td>
       <td *ngIf="instance.created == null"></td>
+      <td *ngIf="instance.updated != null">{{instance.updated.date}}</td>
       <td *ngIf="instance.updated == null"></td>
+      <td *ngIf="instance.dateValidation != null">{{instance.dateValidation.date}}</td>
       <td *ngIf="instance.dateValidation == null"></td>
       <td>{{instance.validation}}</td>
     </tr>

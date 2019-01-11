@@ -8,6 +8,9 @@ import { HttpClient } from "@angular/common/http";
   templateUrl: './deplacement-from-user-year-month.component.html',
   styleUrls: ['./deplacement-from-user-year-month.component.css']
 })
+/**
+ * Requests all Deplacements from a certain user, a certain year and month, given by its id in the url
+ */
 export class DeplacementFromUserYearMonthComponent implements OnInit {
 
   deplacements: any;
@@ -21,13 +24,13 @@ export class DeplacementFromUserYearMonthComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.httpClient.get('http://localhost:8000/api/byUserYearMonth/' + this.userId + '/'+this.year+'/'+this.month, { responseType: 'json' }).subscribe(
+    this.httpClient.get('http://127.0.0.1:8000/api/byUserYearMonth/' + this.userId + '/'+this.year+'/'+this.month, { responseType: 'json' }).subscribe(
       (response) => {
         console.log(response);
         this.deplacements = response;
       },
       (error) => {
-        console.log('Erreur ! : ' + error);
+        console.log('Erreur : ' + error);
       }
     );
   }
