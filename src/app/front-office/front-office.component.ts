@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+import * as Constants from '../utils/globals';
 @Component({
   selector: 'app-front-office',
   templateUrl: './front-office.component.html',
@@ -14,7 +15,7 @@ export class FrontOfficeComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
   deplacements: any;
   ngOnInit() {
-    this.httpClient.get('http://127.0.0.1:8000/api/', { responseType: 'json' }).subscribe(
+    this.httpClient.get(Constants.apiUrl + '/api/', { responseType: 'json' }).subscribe(
       (response) => {
         console.log(response);
         this.deplacements = response;

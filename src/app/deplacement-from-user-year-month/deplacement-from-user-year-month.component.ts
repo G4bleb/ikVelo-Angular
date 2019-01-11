@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { HttpClient } from "@angular/common/http";
+import * as Constants from '../utils/globals';
 
 @Component({
   selector: 'app-deplacement-from-user-year-month',
@@ -24,7 +25,7 @@ export class DeplacementFromUserYearMonthComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.httpClient.get('http://127.0.0.1:8000/api/byUserYearMonth/' + this.userId + '/'+this.year+'/'+this.month, { responseType: 'json' }).subscribe(
+    this.httpClient.get(Constants.apiUrl + '/api/byUserYearMonth/' + this.userId + '/'+this.year+'/'+this.month, { responseType: 'json' }).subscribe(
       (response) => {
         console.log(response);
         this.deplacements = response;
